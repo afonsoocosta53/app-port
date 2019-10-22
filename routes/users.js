@@ -38,12 +38,12 @@ router.get('/logout', function(req, res) {
 // TESTE DE CHAMADA DA API USANDO O TOKEN DO JWTS
 /* router.get('/teste', function (req, res) {
 	/* var options = { 'Authorization': 'JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI1YWM3ZTE1ZjQxYjcwZTY4MTkyN2Q5MzgiLCJ1c2VybmFtZSI6ImFmb25zb19jb3N0YTIyIiwicGFzc3dvcmQiOiIkMmEkMTAkR1c0bGJmUVB6R3Z6emxLTVcxMFoyLjE5Vm9VY3c3VmdtYmRRUUdhbUV6WGFVQk9vWEtPUUsiLCJlbWFpbCI6ImFmb25zb0Bob3RtYWlsLmNvbTIiLCJuYW1lIjoiYWZvbnNvY29zdGEyMiIsInBob25lIjoiMiIsImNvdW50cnkiOiJwb3J0dWdhbDIiLCJyb2xlIjoiY2xpZW50ZSIsImFjY1R5cGUiOiIiLCJhY2NDcmVhdGVkT24iOiIyMDE4LTA0LTA2IDIyOjA2OjM5IiwibGFzdFNpZ25lZEluIjoiMjAxOC0wNC0wNiAyMjowNzowNiIsImxhc3RBY2NJcCI6IjE5Mi4xNjguMjA3LjEiLCJpc0FjdGl2ZSI6InRydWUiLCJhY2NvdW50TnVtYmVyIjoiMiIsImFjY291bnRQb2ludCI6ImVzY29saGFfY29udGEiLCJhY2NvdW50UGxhbiI6IiIsIl9fdiI6MCwiand0VG9rZW4iOiJleUowZVhBaU9pSktWMVFpTENKaGJHY2lPaUpJVXpJMU5pSjkuZXlKZmFXUWlPaUkxWVdNM1pURTFaalF4WWpjd1pUWTRNVGt5TjJRNU16Z2lMQ0oxYzJWeWJtRnRaU0k2SW1GbWIyNXpiMTlqYjNOMFlUSXlJaXdpY0dGemMzZHZjbVFpT2lJa01tRWtNVEFrUjFjMGJHSm1VVkI2UjNaNmVteExUVmN4TUZveUxqRTVWbTlWWTNjM1ZtZHRZbVJSVVVkaGJVVjZXR0ZWUWs5dldFdFBVVXNpTENKbGJXRnBiQ0k2SW1GbWIyNXpiMEJvYjNSdFlXbHNMbU52YlRJaUxDSnVZVzFsSWpvaVlXWnZibk52WTI5emRHRXlNaUlzSW5Cb2IyNWxJam9pTWlJc0ltTnZkVzUwY25raU9pSndiM0owZFdkaGJESWlMQ0p5YjJ4bElqb2lZMnhwWlc1MFpTSXNJbUZqWTFSNWNHVWlPaUlpTENKaFkyTkRjbVZoZEdWa1QyNGlPaUl5TURFNExUQTBMVEEySURJeU9qQTJPak01SWl3aWJHRnpkRk5wWjI1bFpFbHVJam9pSWl3aWJHRnpkRUZqWTBsd0lqb2lNVGt5TGpFMk9DNHlNRGN1TVNJc0ltbHpRV04wYVhabElqb2lkSEoxWlNJc0ltRmpZMjkxYm5ST2RXMWlaWElpT2lJeUlpd2lZV05qYjNWdWRGQnZhVzUwSWpvaVpYTmpiMnhvWVY5amIyNTBZU0lzSW1GalkyOTFiblJRYkdGdUlqb2lJaXdpWDE5Mklqb3dmUS5INExyRGVzZXhTUUd5UGpYWFFzQUdWRWZBbU5BeWRhckpNVjQwWXhEY3ZRIn0.dLC8KGT-2GHTENWRDs6OngooCQc3c5_yv4IcZXvKFoE' };
-	request.get('http://localhost:8080/user/memberinfo', options, function (err, res, body) {
+	request.get('https://portfoli-app.herokuapp.com/user/memberinfo', options, function (err, res, body) {
 		console.log(res);
 	}); */
 /*request.get({
 	headers: { 'Authorization': 'JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI1YWM3ZTE1ZjQxYjcwZTY4MTkyN2Q5MzgiLCJ1c2VybmFtZSI6ImFmb25zb19jb3N0YTIyIiwicGFzc3dvcmQiOiIkMmEkMTAkR1c0bGJmUVB6R3Z6emxLTVcxMFoyLjE5Vm9VY3c3VmdtYmRRUUdhbUV6WGFVQk9vWEtPUUsiLCJlbWFpbCI6ImFmb25zb0Bob3RtYWlsLmNvbTIiLCJuYW1lIjoiYWZvbnNvY29zdGEyMiIsInBob25lIjoiMiIsImNvdW50cnkiOiJwb3J0dWdhbDIiLCJyb2xlIjoiY2xpZW50ZSIsImFjY1R5cGUiOiIiLCJhY2NDcmVhdGVkT24iOiIyMDE4LTA0LTA2IDIyOjA2OjM5IiwibGFzdFNpZ25lZEluIjoiMjAxOC0wNC0wNiAyMjowNzowNiIsImxhc3RBY2NJcCI6IjE5Mi4xNjguMjA3LjEiLCJpc0FjdGl2ZSI6InRydWUiLCJhY2NvdW50TnVtYmVyIjoiMiIsImFjY291bnRQb2ludCI6ImVzY29saGFfY29udGEiLCJhY2NvdW50UGxhbiI6IiIsIl9fdiI6MCwiand0VG9rZW4iOiJleUowZVhBaU9pSktWMVFpTENKaGJHY2lPaUpJVXpJMU5pSjkuZXlKZmFXUWlPaUkxWVdNM1pURTFaalF4WWpjd1pUWTRNVGt5TjJRNU16Z2lMQ0oxYzJWeWJtRnRaU0k2SW1GbWIyNXpiMTlqYjNOMFlUSXlJaXdpY0dGemMzZHZjbVFpT2lJa01tRWtNVEFrUjFjMGJHSm1VVkI2UjNaNmVteExUVmN4TUZveUxqRTVWbTlWWTNjM1ZtZHRZbVJSVVVkaGJVVjZXR0ZWUWs5dldFdFBVVXNpTENKbGJXRnBiQ0k2SW1GbWIyNXpiMEJvYjNSdFlXbHNMbU52YlRJaUxDSnVZVzFsSWpvaVlXWnZibk52WTI5emRHRXlNaUlzSW5Cb2IyNWxJam9pTWlJc0ltTnZkVzUwY25raU9pSndiM0owZFdkaGJESWlMQ0p5YjJ4bElqb2lZMnhwWlc1MFpTSXNJbUZqWTFSNWNHVWlPaUlpTENKaFkyTkRjbVZoZEdWa1QyNGlPaUl5TURFNExUQTBMVEEySURJeU9qQTJPak01SWl3aWJHRnpkRk5wWjI1bFpFbHVJam9pSWl3aWJHRnpkRUZqWTBsd0lqb2lNVGt5TGpFMk9DNHlNRGN1TVNJc0ltbHpRV04wYVhabElqb2lkSEoxWlNJc0ltRmpZMjkxYm5ST2RXMWlaWElpT2lJeUlpd2lZV05qYjNWdWRGQnZhVzUwSWpvaVpYTmpiMnhvWVY5amIyNTBZU0lzSW1GalkyOTFiblJRYkdGdUlqb2lJaXdpWDE5Mklqb3dmUS5INExyRGVzZXhTUUd5UGpYWFFzQUdWRWZBbU5BeWRhckpNVjQwWXhEY3ZRIn0.dLC8KGT-2GHTENWRDs6OngooCQc3c5_yv4IcZXvKFoE' },
-	url: 'http://localhost:8080/user/memberinfo'
+	url: 'https://portfoli-app.herokuapp.com/user/memberinfo'
 }, function (error, response, body) {
 	console.log(body);
 });
@@ -110,7 +110,7 @@ router.get('/memberinfo', function(req, res) {
 	var id_gerado = req.cookies['id_gerado'];
 	request.get({
 		headers: { 'authorization': id_gerado },
-		url: 'http://localhost:8080/user/memberinfo',
+		url: 'https://portfoli-app.herokuapp.com/user/memberinfo',
 	}, function(error, response, body) {
 		res.render('login', { user: body });
 	});
@@ -145,7 +145,7 @@ router.post('/register', function(req, res) {
 		req.body.telemovel + '&&coutry=' + req.body.country;
 	request.post({
 		headers: { 'content-type': 'application/x-www-form-urlencoded' },
-		url: 'http://localhost:8080/user/signup',
+		url: 'https://portfoli-app.herokuapp.com/user/signup',
 		body: bodyText
 	}, function(error, response, body) {
 		console.log(body);
@@ -241,7 +241,7 @@ router.post('/nifvalidation', function(req, res) {
 		var bodyText = 'accountType=Investidor Privado' + '&&nif=' + nif;
 		request.post({
 			headers: { 'content-type': 'application/x-www-form-urlencoded', 'authorization': id_gerado },
-			url: 'http://localhost:8080/user/nifvalidation',
+			url: 'https://portfoli-app.herokuapp.com/user/nifvalidation',
 			body: bodyText
 		}, function(error, response, body) {
 			var body2 = JSON.parse(body);
@@ -260,7 +260,7 @@ router.post('/nifvalidation', function(req, res) {
 			var bodyText = 'accountType=Investidor Coletivo' + '&&nif=' + nif + '&&distrito=' + cidade;
 			request.post({
 				headers: { 'content-type': 'application/x-www-form-urlencoded', 'authorization': id_gerado },
-				url: 'http://localhost:8080/user/nifvalidation',
+				url: 'https://portfoli-app.herokuapp.com/user/nifvalidation',
 				body: bodyText
 			}, function(error, response, body) {
 				var body2 = JSON.parse(body);
@@ -276,7 +276,7 @@ router.post('/nifvalidation', function(req, res) {
 				var bodyText = 'accountType=Empresa' + '&&nif=' + nif + '&&distrito=' + cidade;
 				request.post({
 					headers: { 'content-type': 'application/x-www-form-urlencoded', 'authorization': id_gerado },
-					url: 'http://localhost:8080/user/nifvalidation',
+					url: 'https://portfoli-app.herokuapp.com/user/nifvalidation',
 					body: bodyText
 				}, function(error, response, body) {
 					var body2 = JSON.parse(body);
@@ -291,7 +291,7 @@ router.post('/nifvalidation', function(req, res) {
 					var bodyText = 'accountType=businessIdeia' + '&&nif=' + nif;
 					request.post({
 						headers: { 'content-type': 'application/x-www-form-urlencoded', 'authorization': id_gerado },
-						url: 'http://localhost:8080/user/nifvalidation',
+						url: 'https://portfoli-app.herokuapp.com/user/nifvalidation',
 						body: bodyText
 					}, function(error, response, body) {
 						var body2 = JSON.parse(body);
@@ -316,7 +316,7 @@ router.post('/investidor_privado', function(req, res) {
 	console.log(bodyText);
 	request.post({
 		headers: { 'content-type': 'application/x-www-form-urlencoded', 'authorization': id_gerado },
-		url: 'http://localhost:8080/user/investidor_privado',
+		url: 'https://portfoli-app.herokuapp.com/user/investidor_privado',
 		body: bodyText
 	}, function(error, response, body) {
 		console.log(body);
@@ -355,7 +355,7 @@ router.post('/investidor_coletivo', function(req, res) {
 	console.log(bodyText);
 	request.post({
 		headers: { 'content-type': 'application/x-www-form-urlencoded', 'authorization': id_gerado },
-		url: 'http://localhost:8080/user/investidor_coletivo',
+		url: 'https://portfoli-app.herokuapp.com/user/investidor_coletivo',
 		body: bodyText
 	}, function(error, response, body) {
 		console.log(body);
@@ -378,7 +378,7 @@ router.post('/business', function(req, res) {
 	console.log(bodyText);
 	request.post({
 		headers: { 'content-type': 'application/x-www-form-urlencoded', 'authorization': id_gerado },
-		url: 'http://localhost:8080/user/business',
+		url: 'https://portfoli-app.herokuapp.com/user/business',
 		body: bodyText
 	}, function(error, response, body) {
 		console.log(body);
@@ -402,7 +402,7 @@ router.post('/business_idea', function(req, res) {
 	console.log(bodyText);
 	request.post({
 		headers: { 'content-type': 'application/x-www-form-urlencoded', 'authorization': id_gerado },
-		url: 'http://localhost:8080/user/business_idea',
+		url: 'https://portfoli-app.herokuapp.com/user/business_idea',
 		body: bodyText
 	}, function(error, response, body) {
 		console.log(body);
@@ -436,7 +436,7 @@ router.post('/login', function(req, res, next) {
 	var bodyText = 'username=' + req.body.username + '&&password=' + req.body.password;
 	request.post({
 		headers: { 'content-type': 'application/x-www-form-urlencoded' },
-		url: 'http://localhost:8080/user/authenticate',
+		url: 'https://portfoli-app.herokuapp.com/user/authenticate',
 		body: bodyText
 	}, function(error, response, body) {
 		console.log(body);

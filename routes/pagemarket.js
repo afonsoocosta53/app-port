@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
     if (id_gerado != undefined) {
         request.get({
             headers: { 'authorization': id_gerado },
-            url: 'http://localhost:8080/offer/offers',
+            url: 'https://portfoli-app.herokuapp.com/offer/offers',
         }, function(error, response, body) {
             var body2 = JSON.parse(body);
             var products = body2.offers;
@@ -94,7 +94,7 @@ router.get('/teste', function(req, res, next) {
     if (id_gerado != undefined) {
         request.get({
             headers: { 'authorization': id_gerado },
-            url: 'http://localhost:8080/offer/offers',
+            url: 'https://portfoli-app.herokuapp.com/offer/offers',
         }, function(error, response, body) {
             var body2 = JSON.parse(body);
             var products = body2.offers;
@@ -217,7 +217,7 @@ router.post('/nifvalidation', function(req, res) {
         var bodyText = 'accountType=Investidor Privado' + '&&nif=' + nif;
         request.post({
             headers: { 'content-type': 'application/x-www-form-urlencoded', 'authorization': id_gerado },
-            url: 'http://localhost:8080/user/nifvalidation',
+            url: 'https://portfoli-app.herokuapp.com/user/nifvalidation',
             body: bodyText
         }, function(error, response, body) {
             var body2 = JSON.parse(body);
@@ -236,7 +236,7 @@ router.post('/nifvalidation', function(req, res) {
             var bodyText = 'accountType=Investidor Coletivo' + '&&nif=' + nif + '&&distrito=' + cidade;
             request.post({
                 headers: { 'content-type': 'application/x-www-form-urlencoded', 'authorization': id_gerado },
-                url: 'http://localhost:8080/user/nifvalidation',
+                url: 'https://portfoli-app.herokuapp.com/user/nifvalidation',
                 body: bodyText
             }, function(error, response, body) {
                 var body2 = JSON.parse(body);
@@ -252,7 +252,7 @@ router.post('/nifvalidation', function(req, res) {
                 var bodyText = 'accountType=Empresa' + '&&nif=' + nif + '&&distrito=' + cidade;
                 request.post({
                     headers: { 'content-type': 'application/x-www-form-urlencoded', 'authorization': id_gerado },
-                    url: 'http://localhost:8080/user/nifvalidation',
+                    url: 'https://portfoli-app.herokuapp.com/user/nifvalidation',
                     body: bodyText
                 }, function(error, response, body) {
                     var body2 = JSON.parse(body);
@@ -267,7 +267,7 @@ router.post('/nifvalidation', function(req, res) {
                     var bodyText = 'accountType=businessIdeia' + '&&nif=' + nif;
                     request.post({
                         headers: { 'content-type': 'application/x-www-form-urlencoded', 'authorization': id_gerado },
-                        url: 'http://localhost:8080/user/nifvalidation',
+                        url: 'https://portfoli-app.herokuapp.com/user/nifvalidation',
                         body: bodyText
                     }, function(error, response, body) {
                         var body2 = JSON.parse(body);
@@ -291,7 +291,7 @@ router.post('/nifvalidation_coletivo', function(req, res) {
     var bodyText = 'accountType=Investidor Coletivo' + '&&nif=' + nif + '&&distrito=' + cidade;
     request.post({
         headers: { 'content-type': 'application/x-www-form-urlencoded', 'authorization': id_gerado },
-        url: 'http://localhost:8080/user/nifvalidation',
+        url: 'https://portfoli-app.herokuapp.com/user/nifvalidation',
         body: bodyText
     }, function(error, response, body) {
         var body2 = JSON.parse(body);
@@ -307,7 +307,7 @@ router.post('/nifvalidation_empresa', function(req, res) {
     var bodyText = 'accountType=Empresa' + '&&nif=' + nif + '&&distrito=' + cidade;
     request.post({
         headers: { 'content-type': 'application/x-www-form-urlencoded', 'authorization': id_gerado },
-        url: 'http://localhost:8080/user/nifvalidation',
+        url: 'https://portfoli-app.herokuapp.com/user/nifvalidation',
         body: bodyText
     }, function(error, response, body) {
         var body2 = JSON.parse(body);
@@ -682,7 +682,7 @@ router.post('/oferta_coletivo', function(req, res) {
     console.log(bodyText);
     request.post({
         headers: { 'content-type': 'application/x-www-form-urlencoded', 'authorization': id_gerado },
-        url: 'http://localhost:8080/offer/newOffer',
+        url: 'https://portfoli-app.herokuapp.com/offer/newOffer',
         body: bodyText
     }, function(error, response, body) {
         var body2 = JSON.parse(body);
@@ -1308,7 +1308,7 @@ router.post('/oferta_empresa', function(req, res) {
     console.log(bodyText);
     request.post({
         headers: { 'content-type': 'application/x-www-form-urlencoded', 'authorization': id_gerado },
-        url: 'http://localhost:8080/offer/newOffer',
+        url: 'https://portfoli-app.herokuapp.com/offer/newOffer',
         body: bodyText
     }, function(error, response, body) {
         var body2 = JSON.parse(body);
@@ -1493,7 +1493,7 @@ router.post('/oferta_privado', function(req, res) {
     console.log(bodyText);
     request.post({
         headers: { 'content-type': 'application/x-www-form-urlencoded', 'authorization': id_gerado },
-        url: 'http://localhost:8080/offer/newOffer',
+        url: 'https://portfoli-app.herokuapp.com/offer/newOffer',
         body: bodyText
     }, function(error, response, body) {
         var body2 = JSON.parse(body);
@@ -1507,7 +1507,7 @@ router.post('/oferta_ideia', function(req, res) {
     var bodyText = 'accountType=Investidor Coletivo';
     request.post({
         headers: { 'content-type': 'application/x-www-form-urlencoded', 'authorization': id_gerado },
-        url: 'http://localhost:8080/user/nifvalidation',
+        url: 'https://portfoli-app.herokuapp.com/user/nifvalidation',
         body: bodyText
     }, function(error, response, body) {
         var body2 = JSON.parse(body);
@@ -1548,7 +1548,7 @@ router.post('/newOffer', function(req, res) {
             console.log(bodyText);
             request.post({
                 headers: { 'content-type': 'application/x-www-form-urlencoded', 'authorization': id_gerado },
-                url: 'http://localhost:8080/offer/newOffer',
+                url: 'https://portfoli-app.herokuapp.com/offer/newOffer',
                 body: bodyText
             }, function(error, response, body) {
                 console.log(body);
@@ -1580,7 +1580,7 @@ router.post('/newOffer', function(req, res) {
             console.log(bodyText);
             request.post({
                 headers: { 'content-type': 'application/x-www-form-urlencoded', 'authorization': id_gerado },
-                url: 'http://localhost:8080/offer/newOffer',
+                url: 'https://portfoli-app.herokuapp.com/offer/newOffer',
                 body: bodyText
             }, function(error, response, body) {
                 console.log(body);
@@ -1612,7 +1612,7 @@ router.post('/newOffer', function(req, res) {
             console.log(bodyText);
             request.post({
                 headers: { 'content-type': 'application/x-www-form-urlencoded', 'authorization': id_gerado },
-                url: 'http://localhost:8080/offer/newOffer',
+                url: 'https://portfoli-app.herokuapp.com/offer/newOffer',
                 body: bodyText
             }, function(error, response, body) {
                 console.log(body);
@@ -1643,7 +1643,7 @@ router.post('/newOffer', function(req, res) {
             console.log(bodyText);
             request.post({
                 headers: { 'content-type': 'application/x-www-form-urlencoded', 'authorization': id_gerado },
-                url: 'http://localhost:8080/offer/newOffer',
+                url: 'https://portfoli-app.herokuapp.com/offer/newOffer',
                 body: bodyText
             }, function(error, response, body) {
                 console.log(body);
@@ -1676,7 +1676,7 @@ router.post('/newOffer', function(req, res) {
             console.log(bodyText);
             request.post({
                 headers: { 'content-type': 'application/x-www-form-urlencoded', 'authorization': id_gerado },
-                url: 'http://localhost:8080/offer/newOffer',
+                url: 'https://portfoli-app.herokuapp.com/offer/newOffer',
                 body: bodyText
             }, function(error, response, body) {
                 console.log(body);
@@ -1706,7 +1706,7 @@ router.post('/newOffer', function(req, res) {
             console.log(bodyText);
             request.post({
                 headers: { 'content-type': 'application/x-www-form-urlencoded', 'authorization': id_gerado },
-                url: 'http://localhost:8080/offer/newOffer',
+                url: 'https://portfoli-app.herokuapp.com/offer/newOffer',
                 body: bodyText
             }, function(error, response, body) {
                 console.log(body);
@@ -1738,7 +1738,7 @@ router.post('/newOffer', function(req, res) {
             console.log(bodyText);
             request.post({
                 headers: { 'content-type': 'application/x-www-form-urlencoded', 'authorization': id_gerado },
-                url: 'http://localhost:8080/offer/newOffer',
+                url: 'https://portfoli-app.herokuapp.com/offer/newOffer',
                 body: bodyText
             }, function(error, response, body) {
                 console.log(body);
@@ -1767,7 +1767,7 @@ router.post('/newOffer', function(req, res) {
             console.log(bodyText);
             request.post({
                 headers: { 'content-type': 'application/x-www-form-urlencoded', 'authorization': id_gerado },
-                url: 'http://localhost:8080/offer/newOffer',
+                url: 'https://portfoli-app.herokuapp.com/offer/newOffer',
                 body: bodyText
             }, function(error, response, body) {
                 console.log(body);
@@ -1799,7 +1799,7 @@ router.post('/newOffer', function(req, res) {
             console.log(bodyText);
             request.post({
                 headers: { 'content-type': 'application/x-www-form-urlencoded', 'authorization': id_gerado },
-                url: 'http://localhost:8080/offer/newOffer',
+                url: 'https://portfoli-app.herokuapp.com/offer/newOffer',
                 body: bodyText
             }, function(error, response, body) {
                 console.log(body);
