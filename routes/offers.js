@@ -15,7 +15,7 @@ router.get('/teste', function(req, res) {
     var id_gerado = req.cookies['id_gerado'];
     request.post({
         headers: { 'content-type': 'application/x-www-form-urlencoded', 'authorization': id_gerado },
-        url: 'https://portfoli-app.herokuapp.com/offer/testeoffer',
+        url: 'https://portfoli-api.herokuapp.com/offer/testeoffer',
         body: '1'
     }, function(error, response, body) {
         console.log(body);
@@ -27,7 +27,7 @@ router.get('/offers', function(req, res) {
     var id_gerado = req.cookies['id_gerado'];
     request.get({
         headers: { 'content-type': 'application/x-www-form-urlencoded', 'authorization': id_gerado },
-        url: 'https://portfoli-app.herokuapp.com/offer/offers'
+        url: 'https://portfoli-api.herokuapp.com/offer/offers'
     }, function(error, response, body) {
         console.log(body);
         res.render('investor_private_form');
@@ -38,7 +38,7 @@ router.get('/', function(req, res) {
     var id_gerado = req.cookies['id_gerado'];
     request.get({
         headers: { 'content-type': 'application/x-www-form-urlencoded', 'authorization': id_gerado },
-        url: 'https://portfoli-app.herokuapp.com/offer/offers'
+        url: 'https://portfoli-api.herokuapp.com/offer/offers'
     }, function(error, response, body) {
         var body2 = JSON.parse(body);
         var offers = body2.offers;
@@ -77,7 +77,7 @@ router.post('/newOffer', function(req, res) {
             console.log(bodyText);
             request.post({
                 headers: { 'content-type': 'application/x-www-form-urlencoded', 'authorization': id_gerado },
-                url: 'https://portfoli-app.herokuapp.com/offer/newOffer',
+                url: 'https://portfoli-api.herokuapp.com/offer/newOffer',
                 body: bodyText
             }, function(error, response, body) {
                 console.log(body);
@@ -107,7 +107,7 @@ router.post('/newOffer', function(req, res) {
             console.log(bodyText);
             request.post({
                 headers: { 'content-type': 'application/x-www-form-urlencoded', 'authorization': id_gerado },
-                url: 'https://portfoli-app.herokuapp.com/offer/newOffer',
+                url: 'https://portfoli-api.herokuapp.com/offer/newOffer',
                 body: bodyText
             }, function(error, response, body) {
                 console.log(body);
@@ -137,7 +137,7 @@ router.post('/newOffer', function(req, res) {
             console.log(bodyText);
             request.post({
                 headers: { 'content-type': 'application/x-www-form-urlencoded', 'authorization': id_gerado },
-                url: 'https://portfoli-app.herokuapp.com/offer/newOffer',
+                url: 'https://portfoli-api.herokuapp.com/offer/newOffer',
                 body: bodyText
             }, function(error, response, body) {
                 console.log(body);
@@ -166,7 +166,7 @@ router.post('/newOffer', function(req, res) {
             console.log(bodyText);
             request.post({
                 headers: { 'content-type': 'application/x-www-form-urlencoded', 'authorization': id_gerado },
-                url: 'https://portfoli-app.herokuapp.com/offer/newOffer',
+                url: 'https://portfoli-api.herokuapp.com/offer/newOffer',
                 body: bodyText
             }, function(error, response, body) {
                 console.log(body);
@@ -197,7 +197,7 @@ router.post('/newOffer', function(req, res) {
             console.log(bodyText);
             request.post({
                 headers: { 'content-type': 'application/x-www-form-urlencoded', 'authorization': id_gerado },
-                url: 'https://portfoli-app.herokuapp.com/offer/newOffer',
+                url: 'https://portfoli-api.herokuapp.com/offer/newOffer',
                 body: bodyText
             }, function(error, response, body) {
                 console.log(body);
@@ -225,7 +225,7 @@ router.post('/newOffer', function(req, res) {
             console.log(bodyText);
             request.post({
                 headers: { 'content-type': 'application/x-www-form-urlencoded', 'authorization': id_gerado },
-                url: 'https://portfoli-app.herokuapp.com/offer/newOffer',
+                url: 'https://portfoli-api.herokuapp.com/offer/newOffer',
                 body: bodyText
             }, function(error, response, body) {
                 console.log(body);
@@ -255,7 +255,7 @@ router.post('/newOffer', function(req, res) {
             console.log(bodyText);
             request.post({
                 headers: { 'content-type': 'application/x-www-form-urlencoded', 'authorization': id_gerado },
-                url: 'https://portfoli-app.herokuapp.com/offer/newOffer',
+                url: 'https://portfoli-api.herokuapp.com/offer/newOffer',
                 body: bodyText
             }, function(error, response, body) {
                 console.log(body);
@@ -282,7 +282,7 @@ router.post('/newOffer', function(req, res) {
             console.log(bodyText);
             request.post({
                 headers: { 'content-type': 'application/x-www-form-urlencoded', 'authorization': id_gerado },
-                url: 'https://portfoli-app.herokuapp.com/offer/newOffer',
+                url: 'https://portfoli-api.herokuapp.com/offer/newOffer',
                 body: bodyText
             }, function(error, response, body) {
                 console.log(body);
@@ -312,7 +312,7 @@ router.post('/newOffer', function(req, res) {
             console.log(bodyText);
             request.post({
                 headers: { 'content-type': 'application/x-www-form-urlencoded', 'authorization': id_gerado },
-                url: 'https://portfoli-app.herokuapp.com/offer/newOffer',
+                url: 'https://portfoli-api.herokuapp.com/offer/newOffer',
                 body: bodyText
             }, function(error, response, body) {
                 console.log(body);

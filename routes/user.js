@@ -77,7 +77,7 @@ router.get("/upgrade", function(req, res, next) {
     request.get(
       {
         headers: { authorization: id_gerado },
-        url: "https://portfoli-app.herokuapp.com/user/memberinfo/"
+        url: "https://portfoli-api.herokuapp.com/user/memberinfo/"
       },
       function(error, response, body) {
         var body2 = JSON.parse(body);
@@ -101,7 +101,7 @@ router.get("/profile/:id", function(req, res, next) {
     request.get(
       {
         headers: { authorization: id_gerado, id_profile: id_profile },
-        url: "https://portfoli-app.herokuapp.com/user/profile/"
+        url: "https://portfoli-api.herokuapp.com/user/profile/"
       },
       function(error, response, body) {
         var body2 = JSON.parse(body);
@@ -153,7 +153,7 @@ router.get("/changeinfo", function(req, res, next) {
     request.get(
       {
         headers: { authorization: id_gerado },
-        url: "https://portfoli-app.herokuapp.com/user/memberinfo/"
+        url: "https://portfoli-api.herokuapp.com/user/memberinfo/"
       },
       function(error, response, body) {
         var body2 = JSON.parse(body);
@@ -233,7 +233,7 @@ router.get("/activate/:id_gerado", function(req, res) {
   request.get(
     {
       headers: { authorization: id_g },
-      url: "https://portfoli-app.herokuapp.com/user/activate"
+      url: "https://portfoli-api.herokuapp.com/user/activate"
     },
     function(error, response, body) {
       var body2 = JSON.parse(body);
@@ -262,7 +262,7 @@ router.post("/register", function(req, res) {
   request.post(
     {
       headers: { "content-type": "application/x-www-form-urlencoded" },
-      url: "https://portfoli-app.herokuapp.com/user/signup",
+      url: "https://portfoli-api.herokuapp.com/user/signup",
       body: bodyText
     },
     function(error, response, body) {
@@ -279,7 +279,7 @@ router.post("/login", function(req, res) {
   request.post(
     {
       headers: { "content-type": "application/x-www-form-urlencoded" },
-      url: "https://portfoli-app.herokuapp.com/user/authenticate",
+      url: "https://portfoli-api.herokuapp.com/user/authenticate",
       body: bodyText
     },
     function(error, response, body) {
@@ -351,7 +351,7 @@ router.post("/business_company", function(req, res) {
         "content-type": "application/x-www-form-urlencoded",
         authorization: id_gerado
       },
-      url: "https://portfoli-app.herokuapp.com/user/business",
+      url: "https://portfoli-api.herokuapp.com/user/business",
       body: bodyText
     },
     function(error, response, body) {
@@ -410,7 +410,7 @@ router.post("/business_idea", function(req, res) {
         "content-type": "application/x-www-form-urlencoded",
         authorization: id_gerado
       },
-      url: "https://portfoli-app.herokuapp.com/user/business",
+      url: "https://portfoli-api.herokuapp.com/user/business",
       body: bodyText
     },
     function(error, response, body) {
@@ -425,7 +425,7 @@ router.get("/estado_conta", function(req, res, next) {
   request.get(
     {
       headers: { authorization: id_gerado },
-      url: "https://portfoli-app.herokuapp.com/user/memberinfo"
+      url: "https://portfoli-api.herokuapp.com/user/memberinfo"
     },
     function(error, response, body) {
       var body2 = JSON.parse(body);
@@ -451,7 +451,7 @@ router.get("/add_contact/:id", function(req, res, next) {
         "content-type": "application/x-www-form-urlencoded",
         authorization: id_gerado
       },
-      url: "https://portfoli-app.herokuapp.com/user/add_contact",
+      url: "https://portfoli-api.herokuapp.com/user/add_contact",
       body: bodyText
     },
     function(error, response, body) {
@@ -492,7 +492,7 @@ router.get("/removerContact/:id", function(req, res, next) {
         "content-type": "application/x-www-form-urlencoded",
         authorization: id_gerado
       },
-      url: "https://portfoli-app.herokuapp.com/user/removerContact",
+      url: "https://portfoli-api.herokuapp.com/user/removerContact",
       body: bodyText
     },
     function(error, response, body) {
@@ -530,7 +530,7 @@ router.get("/contacts/:page", function(req, res) {
     request.get(
       {
         headers: { authorization: id_gerado },
-        url: "https://portfoli-app.herokuapp.com/user/userContacts/" + page
+        url: "https://portfoli-api.herokuapp.com/user/userContacts/" + page
       },
       function(error, response, body) {
         var body2 = JSON.parse(body);
@@ -600,7 +600,7 @@ router.post("/changeinfo", upload.single("imagem"), function(req, res) {
         "content-type": "application/x-www-form-urlencoded",
         authorization: id_gerado
       },
-      url: "https://portfoli-app.herokuapp.com/user/changeinfo",
+      url: "https://portfoli-api.herokuapp.com/user/changeinfo",
       body: bodyText
     },
     function(error, response, body) {
