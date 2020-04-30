@@ -11,10 +11,11 @@
     "author": "Noxyo",
     "license": "ISC",
     "dependencies": {
-        "body-parser": "^1.18.2",
+        "body-parser": "^1.19.0",
         "connect-flash": "^0.1.1",
         "connect-mongo": "^2.0.1",
         "cookie-parser": "^1.4.3",
+        "cookie-session": "^1.4.0",
         "express": "^4.16.3",
         "express-handlebars": "^3.0.0",
         "express-seo-breadcrumbs": "^2.0.2",

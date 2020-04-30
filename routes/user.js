@@ -273,7 +273,6 @@ router.post("/register", function(req, res) {
 });
 
 router.post("/login", function(req, res) {
-  console.log(req);
   var bodyText =
     "username=" + req.body.username + "&&password=" + req.body.password;
   request.post(
